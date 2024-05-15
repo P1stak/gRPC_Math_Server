@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package quadratic;
+
+service QuadraticSolver {
+  rpc SolveQuadraticEquation (QuadraticRequest) returns (QuadraticResponse);
+}
+
+message QuadraticRequest {
+  double a = 1;
+  double b = 2;
+  double c = 3;
+}
+
+message QuadraticResponse {
+  double root1 = 1;
+  double root2 = 2;
+}
